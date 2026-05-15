@@ -12,15 +12,7 @@ tmp/
 data/data_manifests/*.csv
 data/sample_gffs/
 
-# Local agent/editor runtime bundles
-.agents/
-.claude/
-.codex/
-.opencode/
-
 # Trellis local/runtime state
 .trellis/.developer
 .trellis/.runtime/
 .trellis/.backup-*/
-.trellis/tasks/
-.trellis/workspace/
