@@ -1,0 +1,34 @@
+tool_id: scan_case_features
+name: scan_case_features
+category: genomic_context
+status: available
+description: >
+  Scan a concrete seed-neighbor co-localization case for local nucleotide
+  sequence features such as direct repeats, inverted repeats, tandem arrays,
+  motifs, low-complexity sequence, and future ncRNA/CRISPR-like features.
+inputs:
+  case_id:
+    type: string
+    required: true
+    description: Run-scoped typed case ID, e.g. cmp:RUN123:case:42.
+  feature_types:
+    type: array[string]
+    required: false
+    default:
+      - direct_repeat
+      - inverted_repeat
+      - tandem_repeat
+      - motif
+  target_region:
+    type: string
+    required: false
+    default: locus
+  flank_bp:
+    type: integer
+    required: false
+    default: 500
+outputs:
+  scan_id: string
+  case_id: string
+  features: array
+  warnings: array

@@ -1,0 +1,21 @@
+name: compass
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - mmseqs2
+  - pandas
+  - scipy
+  - pyyaml
+  - biopython
+  - typer
+  - rich
+  - pydantic
+  - pytest
+  - pip
+  - pip:
+      - -e .
+      - litellm
+      - instructor
+      - openai

@@ -1,0 +1,17 @@
+tool_id: get_case
+name: get_case
+category: genomic_context
+status: available
+description: >
+  Return the typed case card for a single seed-neighbor co-localization case.
+  Use this before requesting locus diagrams or sequence-feature scans.
+inputs:
+  case_id:
+    type: string
+    required: true
+outputs:
+  case_id: string
+  seed_homolog: object
+  neighbor: object
+  locus: object
+  annotations: object

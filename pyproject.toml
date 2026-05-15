@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "compass-discovery"
+version = "0.1.0"
+description = "Sequence-context workflow for microbial gene function system discovery"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "biopython",
+  "instructor",
+  "litellm",
+  "openai",
+  "pandas",
+  "pydantic",
+  "pyyaml",
+  "rich",
+  "scipy",
+  "typer",
+]
+
+[project.scripts]
+compass = "compass.cli.main:main"
+
+[tool.setuptools.packages.find]
+include = ["compass*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
